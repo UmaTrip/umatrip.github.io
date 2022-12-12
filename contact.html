@@ -10,12 +10,42 @@
 
   gtag('config', 'G-3MLS2QYHBS');
 </script>
+<title>UmaTrip: Contact</title>
+<link rel="icon" type="image/x-icon" href="umatrip_logo.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
 
+.contact_box{
+  
+  margin-right: 55%;
+  align-items: flex-start;
+}
+
 input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=number] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=email] {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -39,28 +69,50 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
+input[type=reset] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=reset]:hover {
+  background-color: #9ce19f;
+}
+
 .container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
+  border-radius: 20px;
+  background-color: #a8f5f5;
   padding: 20px;
+  margin: auto;
+  width: 65%;
+  
 }
 </style>
 </head>
-<body>
-
-<h3>Contact Form</h3>
+<body style="background-color: skyblue;">
+  <header>
+    <a href="https://umatrip.github.io/"><img src="umatrip_logo.png" width="90" height="75" style="display: inline;"></a>
+  </header>
+<div class="contact_box">
+<h3>Contact us</h3>
 
 <div class="container">
   <form action="/action_page.php">
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-    <label for="country">Country</label>
+    <label for="fname">Name</label><br>
+    <input type="text" id="fname" name="firstname" placeholder="Name">
+    <br>
+    <label for="mail">Email address</label><br>
+    <input type="email" id="e_mail" name="email_address" placeholder="Email Address">
+    <br>
+    <label for="mobnumber">Mobile No.</label><br>
+    <input type="number" id="mob_no" name="mnumber" placeholder="Mobile Number">
+    <br>
+    <label for="country">Country</label><br>
     <select id="country" name="country">
-        <option>country</option>
+        <option>Choose Country</option>
         <option value="Afghanistan">Afghanistan</option>
         <option value="Aland Islands">Åland Islands</option>
         <option value="Albania">Albania</option>
@@ -314,12 +366,14 @@ input[type=submit]:hover {
         <option value="Zambia">Zambia</option>
         <option value="Zimbabwe">Zimbabwe</option>
     </select>
-
-    <label for="subject">Subject</label>
+    <br>
+    <label for="subject">Subject</label><br>
     <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
+    <br>
     <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
   </form>
+</div>
 </div>
 
 </body>
